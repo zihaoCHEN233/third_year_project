@@ -1,0 +1,30 @@
+"ZiHaoC" Annotation Guideline v4 😊
+Published Date: March 6th, 2024
+
+
+Drop:
+    (This section was only considered when initially manually checking the data, to filter irrelevant reviews, so the second or later annotator was not required to apply them.)
+
+    1. Drop reviews that only appeared to be transformed from python emoji api, such as: "thumbs up thumbs up thumbs up red heart red heart", which probably was from "👍👍👍♥️♥️". If the review included both suggestions and these "emoji words", it would be kept.
+
+    2. Drop reviews that only contained emotional praises, such as: "This app is fantastic, I love it so much.". However, if the praise included discussions about app features, like "This software is really great, especially the design of navigation bar.", it would be kept.
+
+    3. Drop reviews that only contained emotional complaints, such as: "Ahhhhh, this software is really terrible! How could you design it like this?". However, if the complaint included discussions about app features, like "This software is really terrible, you should redesign the user interface.", it would be kept. 
+
+    4. Drop politically related reviews even with possible software suggestions.
+
+    5. Reviews expressing long-term affection for a game or other platforms were not considered, as they cannot provide useful information on current or past features.
+
+    6. If reviews described short videos or similar platforms as "interesting", it would be kept, as this may suggest certain recommendation algorithms were effective.
+
+    7. If reviews contained the praise/complaint about certain versions, it would be kept, as this may indicate feature designs in the new version update probably (not) be favorable.
+
+    8. If reviews included positive feedback for the existing app feature, it could be kept as the evidence of good quality.
+
+    9. Appropriate inferences could be accepted. For example, a comment like "This software is great, I can communicate very well with my family everyday." could be kept. Because it may imply positive feedback on the communication feature, and suggest that this back-and-forth communication seemed to have few bugs in good usability. It even hinted at a certain level of user experience availability, as family members of various ages were likely to be able to operate this app.
+
+    10. Drop reviews that were incomprehensible without specific logic, as less useful information could be extracted and time-consuming.
+
+    11. Drop reviews that contained the possible bias or made the annotator uncomfortable, such as "insults" and "toxicity".
+
+    12. If there was a really tricky review: As long as this review was considered to be insightful for software developers or management, it could be kept.

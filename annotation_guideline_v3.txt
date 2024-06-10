@@ -1,0 +1,49 @@
+Annotation Guideline v3 😊 (for later annotators)
+Published Date: February 12th, 2024
+
+Project: "Sentiment analysis of app reviews for requirements engineering" (https://studentnet.cs.manchester.ac.uk/ugt/year3/project/projectbookdetails.php?projectid=51779)
+
+Task: Based on software reviews in the ["content"], determine three variables: negative, positive, and emotion_label, to assist in the calculation of the kappa coefficient.
+
+The score ranges for negative and positive were -5 to -1 and 1 to 5, respectively, where -5 represented a very dissatisfied complaint emotion, and 5 represented a very satisfied positive emotion. -1 and 1 represented the absence of a certain emotion, for example, (-1, 3) meant that the comment had no negative emotion, only positive, with a positivity level of 3.
+
+Process: First, determine negative and positive scores for each review, then by comparing absolute values of these two scores, derive the label for emotion_label. ✌️
+
+For instance:
+If negative was -3 and positive was 3, then the emotion_label should be neutral. 
+If negative was -1 and positive was 1, then the emotion_label should be neutral. 
+If negative was -1 and positive was 2, then the emotion_label should be positive. 
+If negative was -5 and positive was 1, then the emotion_label should be negative.
+
+Each person's scoring standard was different. Here, a theme was encouraged to make the data as close to a Gaussian distribution as possible. I strongly suggested that everyone's judgment criteria allowed more data to be distributed at 3 and 4 as well as -3 and -4. 
+
+Then, based on the emotional intensity of sentences, further decide whether it was necessary to decrease or increase the score to 2 and 5 or -2 and -5, respectively. (Of course, if a review truly lacked a certain level of emotional expression, then directly rating it as 1 or -1 was sufficient～)
+
+
+
+Here are some reference rules 😂:
+
+1. Some phrases in sentences might confuse you, such as "thumb up", which were actually emojis turned into English words. "Thumb up" represented 👍, similarly "red heart" was ♥️, "angry face" was 😠, "thumb down" was 👎. When considering emotional intensity, allocate more weights to them. For example, a review "UI was good" could be assigned (-1, 2), while "UI was good thumb up" could be assigned (-1, 4) and "UI was good thumb up thumb up thumb up" could be assigned (-1, 5).
+
+2. When making a judgment, you could firstly determine if the review had only one type of emotion: if there was only one emotion, you only need to assess the emotional intensity, scoring within 2~5 or -2~-5.
+(Here, there was no 1 or -1 because if there was only one type of emotion, it must be within 2~5 or -2~-5; the other non-present emotion could be directly set to 1 or -1.)
+
+3. The length/structure of a sentence could also be a basis for judgment (e.g. if a phrase was repeated many times or a comment listed many similar interrogative sentences), or certain specific adjectives and adverbs.
+For example: "very very excellent" was stronger than "very excellent"; "very excellent" was stronger than "excellent"; "excellent" was stronger than "good".
+
+4. For some very cold comments like "UI was accepted." then directly rate it as (-1, 1).
+
+5. *Encourage appropriate association:
+For example, if a comment expressed negative emotions about security but positive emotions about UI design, and you were really torn about which emotional score prevailed, it could be marked with more negative scores and fewer positive scores.
+Because evidently, security was more important than UI design.*
+
+6. If you encountered a comment where the positive and negative scores were neck and neck in terms of emotional intensity, just set it to the corresponding level of neutral, such as (3, -3) or even (-5, 5).
+
+7. If a sentence had two kinds of emotions, do not panic or fear🍺. Consider the scores for each emotion separately, and then compare their absolute values to determine the emotion_label. 😊
+
+
+
+
+
+
+🌹Thanks for Reading and My Deeeeeepest Thanks to Friendly and Kind Annotators.😊🍺
